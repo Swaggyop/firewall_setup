@@ -1,0 +1,36 @@
+✅ 7. Document Commands or GUI Steps Used (Telnet Version)
+
+🔧 Step-by-Step using Windows Firewall (GUI) with Port 23 for Telnet
+
+Enable Telnet Client on Windows (if not already enabled):
+
+Open Control Panel → Programs → Turn Windows features on or off
+
+Check Telnet Client → Click OK
+
+Create a Block Rule (Port 23):
+
+Press Win + R → type wf.msc → press Enter
+
+Navigate to Inbound Rules
+
+Click New Rule...
+
+Choose Port, click Next
+
+Select TCP, enter 23 in “Specific local ports” → click Next
+
+Select Block the connection, click Next
+
+Apply to Domain, Private, and Public
+
+Name it: Block Telnet Test, click Finish
+
+
+now test it with command locally telnet localhost 23 and it will show failed to connect.
+
+then - Remove the Rule:
+
+1- In wf.msc, under Inbound Rules
+
+2- Find Block Telnet Test, right-click > Delete

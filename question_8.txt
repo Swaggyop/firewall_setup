@@ -1,0 +1,16 @@
+✅ 8. Summarize How Windows Firewall Filters Traffic
+
+Windows Firewall works by evaluating rules that define whether specific traffic is allowed or blocked. These rules are based on criteria like:
+
+Direction: Inbound (coming into the system) or Outbound
+
+Protocol: TCP, UDP, ICMP
+
+Port numbers: e.g., Port 23 for Telnet
+
+Program or service: e.g., block only for a specific application
+
+Network profiles: Domain, Private, Public
+
+In this task, an inbound rule was created to block Telnet (port 23). This rule prevented any service (even local ones) from accepting connections on that port. Once the rule was deleted, Telnet connections were permitted again, showing how firewall rules can dynamically control network access and harden a system.
+

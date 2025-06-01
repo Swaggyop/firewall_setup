@@ -1,0 +1,50 @@
+🔧 Step-by-Step for Windows Firewall
+
+1. Open Windows Firewall Configuration Tool
+
+Press Win + R, type wf.msc, and hit Enter to open Windows Defender Firewall with Advanced Security.
+
+
+2. List Current Firewall Rules
+
+In the left pane, select Inbound Rules.
+
+Review the list to see all active rules.
+
+
+3. Add a Rule to Block Inbound Traffic on a Specific Port (e.g., Port 23 for Telnet)
+
+In the right pane, click New Rule…
+
+Choose Port > Click Next.
+
+Select TCP, then enter 23 in "Specific local ports".
+
+Click Next, select Block the connection.
+
+Apply to Domain, Private, Public > Click Next.
+
+Name it something like "Block Telnet (Port 23)" > Click Finish.
+
+
+4. Test the Rule
+
+Try connecting to the system using Telnet on port 23 from another machine (or locally using telnet localhost 23).
+
+It should fail to connect due to the rule.
+
+
+5. Add Rule to Allow SSH (Port 22)
+
+
+Follow the same steps as in step 3.
+
+Enter 22 as the port, and this time select Allow the connection.(as i performed this in my windows machine so i didn't do this)
+
+
+6. Remove the Test Block Rule
+
+Go back to Inbound Rules.
+
+Find the rule "Block Telnet (Port 23)", right-click, and choose Delete.
+
